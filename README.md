@@ -18,6 +18,21 @@ github "DanisFabric/Waggle"
 
 ### Animator 更函数化的`UIViewAnimation`API
 
+更好的进行动画的方式
+
+```Swift
+UIView.animator(duration: 0.3)
+            .delay(1)
+            .spring(damping: 0.6, velocity: 1.0)
+            .animations {
+
+        }
+            .completion { (_) in
+
+        }
+            .begin()
+```
+
 ```Swift
 // UIView API
 UIView.animate(withDuration: duration) {

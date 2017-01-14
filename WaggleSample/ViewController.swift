@@ -16,11 +16,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        UIView.animator(duration: 0.3).delay(1).animations {
+        UIView.animator(duration: 0.3)
+            .delay(1)
+            .spring(damping: 0.6, velocity: 1.0)
+            .animations {
             
-        }.completion { (_) in
+        }
+            .completion { (_) in
             
-        }.begin()
+        }
+            .begin()
     }
 
     override func didReceiveMemoryWarning() {
