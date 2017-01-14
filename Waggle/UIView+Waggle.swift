@@ -8,6 +8,8 @@
 
 import UIKit
 
+private let duration: TimeInterval = 0.5
+
 public final class Waggle {
     let view: UIView
     init(view: UIView) {
@@ -22,32 +24,66 @@ extension UIView {
 }
 
 extension Waggle {
-    func rotate(angle: CGFloat, clockwise: Bool, completion: ((Bool) -> Void)? = nil) {
+    public func rotate(by angle: CGFloat, completion: ((Bool) -> Void)? = nil) {
+        let originTransform = view.transform
+        let newTransform = view.transform.rotated(by: angle)
         
+        animate(toNew: { 
+            self.view.transform = newTransform
+        }) { 
+            self.view.transform = originTransform
+        }
     }
-    func scale(dx: CGFloat, dy: CGFloat, completion: ((Bool) -> Void)? = nil) {
-        
+    public func scale(by x: CGFloat, y: CGFloat, completion: ((Bool) -> Void)? = nil) {
+        let originTransform = view.transform
+        let newTransform = view.transform.scaledBy(x: x, y: y)
+    
+        animate(toNew: { 
+            self.view.transform = newTransform
+        }) { 
+            self.view.transform = originTransform
+        }
     }
-    func move(offset: UIOffset, completion: ((Bool) -> Void)? = nil) {
+    public func move(by offset: UIOffset, completion: ((Bool) -> Void)? = nil) {
+        let originCenter = view.center
+        let newCenter = CGPoint(x: view.center.x + offset.horizontal, y: view.center.y + offset.vertical)
         
+        animate(toNew: { 
+            self.view.center = newCenter
+        }) { 
+            self.view.center = originCenter
+        }
+    }
+    private func animate(toNew animation1: (() -> Void)?, toOrigin animation2: (() -> Void)?) {
+        UIView.animator(duration: duration * 0.25).animations {
+            
+            animation1?()
+            
+        }.completion { (_) in
+            
+            UIView.animator(duration: duration * 0.75).animations {
+                animation2?()
+            }.begin()
+            
+        }.begin()
     }
 }
 
 extension Waggle {
-    func rotate() {
-        
+    public func rotate() {
+        rotate(by: CGFloat(M_PI_4))
     }
-    func sacleOut() {
-        
+    public func zoomIn() {
+        scale(by: 1.2, y: 1.2)
     }
-    func scaleIn() {
-        
+    public func zoomOut() {
+        scale(by: 0.8, y: 0.8)
     }
-    func moveHorizontal() {
-        
+    public func moveHorizontal() {
+        move(by: UIOffset(horizontal: 16, vertical: 0))
     }
-    func moveVertical() {
-        
+    public func moveVertical() {
+        move(by: UIOffset(horizontal: 0, vertical: 16))
     }
     
 }
