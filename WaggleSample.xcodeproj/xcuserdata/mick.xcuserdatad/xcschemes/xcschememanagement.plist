@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Waggle.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>WaggleSample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>004115761E29C5600059271E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>004115901E29C56D0059271E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

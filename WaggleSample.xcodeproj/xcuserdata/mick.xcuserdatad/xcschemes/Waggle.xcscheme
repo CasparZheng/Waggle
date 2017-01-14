@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "004115761E29C5600059271E"
-               BuildableName = "WaggleSample.app"
-               BlueprintName = "WaggleSample"
+               BlueprintIdentifier = "004115901E29C56D0059271E"
+               BuildableName = "Waggle.framework"
+               BlueprintName = "Waggle"
                ReferencedContainer = "container:WaggleSample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "004115761E29C5600059271E"
-            BuildableName = "WaggleSample.app"
-            BlueprintName = "WaggleSample"
-            ReferencedContainer = "container:WaggleSample.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "004115761E29C5600059271E"
-            BuildableName = "WaggleSample.app"
-            BlueprintName = "WaggleSample"
+            BlueprintIdentifier = "004115901E29C56D0059271E"
+            BuildableName = "Waggle.framework"
+            BlueprintName = "Waggle"
             ReferencedContainer = "container:WaggleSample.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "004115761E29C5600059271E"
-            BuildableName = "WaggleSample.app"
-            BlueprintName = "WaggleSample"
+            BlueprintIdentifier = "004115901E29C56D0059271E"
+            BuildableName = "Waggle.framework"
+            BlueprintName = "Waggle"
             ReferencedContainer = "container:WaggleSample.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
