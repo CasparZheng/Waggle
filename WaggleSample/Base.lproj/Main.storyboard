@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WaggleSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +20,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bpv-2j-d00">
+                                <rect key="frame" x="107" y="84" width="160" height="160"/>
+                                <color key="backgroundColor" red="0.0" green="0.72941176470000002" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="gwj-Pv-HV0"/>
+                                    <constraint firstAttribute="width" constant="160" id="tzm-kf-int"/>
+                                </constraints>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MeI-Kb-HZW">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="rotate" id="Q2o-VZ-NSZ">
+                                        <connections>
+                                            <action selector="onRotate:" destination="BYZ-38-t0r" id="vhg-sA-JvM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="zoomIn" id="SmL-zf-7ht">
+                                        <connections>
+                                            <action selector="onZoomIn:" destination="BYZ-38-t0r" id="98T-iO-nR7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="zoomOut" id="5rE-ty-HvC">
+                                        <connections>
+                                            <action selector="onZoomOut:" destination="BYZ-38-t0r" id="NK3-O6-OZV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="horizontal" id="QOC-pr-NXs">
+                                        <connections>
+                                            <action selector="onMoveHorizontal:" destination="BYZ-38-t0r" id="TKB-mV-jVc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="vertical" id="ZFV-eE-kHW">
+                                        <connections>
+                                            <action selector="onMoveVertical:" destination="BYZ-38-t0r" id="Kg8-mD-268"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bpv-2j-d00" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="H2d-qb-VQi"/>
+                            <constraint firstAttribute="trailing" secondItem="MeI-Kb-HZW" secondAttribute="trailing" id="V7P-Eh-8wf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MeI-Kb-HZW" secondAttribute="bottom" id="aZZ-mY-VCq"/>
+                            <constraint firstItem="Bpv-2j-d00" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lIR-6N-Dyg"/>
+                            <constraint firstItem="MeI-Kb-HZW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="txE-er-lRz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="testView" destination="Bpv-2j-d00" id="Tvz-d1-Abq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

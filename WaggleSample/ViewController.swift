@@ -10,6 +10,7 @@ import UIKit
 import Waggle
 
 class ViewController: UIViewController {
+    @IBOutlet weak var testView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onRotate(_ sender: Any) {
+        testView.waggle.rotate()
+    }
+    @IBAction func onZoomIn(_ sender: Any) {
+        testView.waggle.zoomIn()
+    }
+    @IBAction func onZoomOut(_ sender: Any) {
+        testView.waggle.zoomOut()
+    }
+    @IBAction func onMoveHorizontal(_ sender: Any) {
+        testView.waggle.moveHorizontal()
+    }
+    @IBAction func onMoveVertical(_ sender: Any) {
+        testView.waggle.moveVertical()
+    }
 
 }
 

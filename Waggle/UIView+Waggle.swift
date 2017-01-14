@@ -55,13 +55,13 @@ extension Waggle {
         }
     }
     private func animate(toNew animation1: (() -> Void)?, toOrigin animation2: (() -> Void)?) {
-        UIView.animator(duration: duration * 0.25).animations {
+        UIView.animator(duration: duration * 0.3).options(.curveEaseOut).animations {
             
             animation1?()
             
         }.completion { (_) in
             
-            UIView.animator(duration: duration * 0.75).animations {
+            UIView.animator(duration: duration * 0.7).spring(damping: 0.6, velocity: 1.0).animations {
                 animation2?()
             }.begin()
             
@@ -80,10 +80,10 @@ extension Waggle {
         scale(by: 0.8, y: 0.8)
     }
     public func moveHorizontal() {
-        move(by: UIOffset(horizontal: 16, vertical: 0))
+        move(by: UIOffset(horizontal: 32, vertical: 0))
     }
     public func moveVertical() {
-        move(by: UIOffset(horizontal: 0, vertical: 16))
+        move(by: UIOffset(horizontal: 0, vertical: 32))
     }
     
 }
