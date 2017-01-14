@@ -65,3 +65,28 @@ UIView.animator(duration: duration).delay(2).spring(damping: damping, velocity: 
 ```
 
 ### Waggle 晃动UIView
+
+可以直接下载demo app查看具体效果，使用方式也十分简单。
+
+```Swift
+testView.waggle.rotate(by: CGFloat(M_PI_4)) { finished in
+  // completion
+}
+testView.waggle.scale(by: 1.2, y: 1.2) { finished in
+  // completion
+}
+testView.waggle.move(by: UIOffset(horizontal: 36, vertical: 36)) { finished in
+  // completion
+}
+```
+
+Waggle提供了默认参数的基本动画，下列函数:
+
+```Swift
+testView.waggle.rotate()
+testView.waggle.zoomIn()
+testView.waggle.zoomOut()
+testView.waggle.moveHorizontal()
+testView.waggle.moveVertical()
+
+```
