@@ -61,7 +61,7 @@ extension Waggle {
             
         }.completion { (_) in
             
-            UIView.animator(duration: duration * 0.7).spring(damping: 0.6, velocity: 1.0).animations {
+            UIView.animator(duration: duration * 0.7).spring(damping: 0.4, velocity: 0.8).animations {
                 animation2?()
             }.begin()
             
