@@ -71,7 +71,7 @@ extension Waggle {
 
 extension Waggle {
     public func rotate() {
-        rotate(by: CGFloat(M_PI_4))
+        rotate(by: CGFloat(Double.pi / 4))
     }
     public func zoomIn() {
         scale(by: 1.2, y: 1.2)
