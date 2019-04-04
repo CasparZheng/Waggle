@@ -19,7 +19,7 @@ public class Animator {
     private var delay: TimeInterval = 0
     private var damping: CGFloat = 0
     private var velocity: CGFloat = 0
-    private var options: UIViewAnimationOptions = .curveEaseInOut
+    private var options: UIView.AnimationOptions = .curveEaseInOut
     
     init(duration: TimeInterval) {
         self.duration = duration
@@ -30,7 +30,7 @@ public class Animator {
         
         return self
     }
-    public func options(_ options: UIViewAnimationOptions) -> Self {
+    public func options(_ options: UIView.AnimationOptions) -> Self {
         self.options = options
         
         return self
